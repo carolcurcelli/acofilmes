@@ -7,6 +7,7 @@ header {
 	padding: 10px 0;
 	position: fixed;
 	width: 100vw;
+	z-index: 10;
 }
 
 header .container {
@@ -93,27 +94,20 @@ footer .container {
 }
 
 .carrousel {
-	position: relative;
+	display:flex;
 }
 
 .trampo {
-	position: absolute;
-	top: 0;
-	z-index:-5;
-	opacity: 0;
-	right: 100%;
+	animation: slide 20s ease infinite;
 }
 
-.trampo.--active {
-	position: relative;
-	transition: .3s;
-	z-index: -1;
-	opacity: 1;
-	right: 0;
-}
-
-.trampos.--active + .trampo {
-	right: -100%;
+@keyframes slide {
+	0% {transform: translateX(0vw);}
+	32% {transform: translateX(0vw);}
+	33% {transform: translateX(-100vw);}
+	62% {transform: translateX(-100vw);}
+	63% {transform: translateX(-200vw);}
+	99% {transform: translateX(-200vw);}
 }
 
 /* OPEN MENU */
