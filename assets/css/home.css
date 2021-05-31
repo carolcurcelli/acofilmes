@@ -100,18 +100,34 @@ footer .container {
 	padding: 6em 0 3em;
 }
 
-.celebrities {
+.celebrities,
+.our-work {
 	padding: 3em 0;
+	position: relative;
+	overflow: hidden;
 }
 
-.celebrities__title {
+.our-work#nosso-trabalho {
+	display: flex;
+	flex-direction: column;
+	padding: 5em 0 0;
+}
+
+.celebrities__title,
+.our-work__title {
 	text-transform: uppercase;
 	display: flex;
     align-items: flex-end;
 	font-size: 1.25rem;
 }
 
-.celebrities__title:after {
+.our-work__title {
+	width: 9em;
+	margin-left: calc(100% - 9em);
+}
+
+.celebrities__title:after,
+.our-work__title:after {
 	content:'';
 	height: 16em;
 	width: 16em;
@@ -121,15 +137,26 @@ footer .container {
 	top: -120px;
     left: -50px;
     transform: rotate(65deg);
+	z-index: 1;
 }
 
-.celebrities__title strong {
+.our-work__title:after {
+	border-color: #ffffff;
+    left: initial;
+	right: -60px;
+    top: -150px;
+    transform: rotate(56deg);
+}
+
+.celebrities__title strong, 
+.our-work__title strong {
 	font-weight: bold;
 	position: relative;
 	display: inline-block;
 }
 
-.celebrities__title strong:after {
+.celebrities__title strong:after,
+.our-work__title strong:after {
 	content:'';
 	position: absolute;
 	height: 2px;
@@ -139,7 +166,12 @@ footer .container {
 	left: 0;
 }
 
-.celebrities__title span {
+.our-work__title strong:after {
+	background-color: #ffffff;
+}
+
+.celebrities__title span,
+.our-work__title span {
 	display:block;
 }
 
@@ -148,13 +180,19 @@ footer .container {
 	display:none;
 }
 
-.celebrities__icon__wrapper {
+.celebrities__icon__wrapper,
+.our-work__icon__wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 10em 0 0;
 }
 
-.celebrities__icon {
+.our-work__icon__wrapper {
+	padding: 6em 0 0;
+}
+
+.celebrities__icon,
+.our-work__icon {
 	width: 50%;
 }
 
@@ -164,8 +202,13 @@ footer .container {
 	transform: translate(0,-70px);
 }
 
+.our-work__icon:nth-child(odd) {
+	transform: translate(0,-70px);
+}
+
 .clients,
-.contact {
+.contact,
+.our-work {
 	background-image: url(../img/bg_black.jpg);
 	padding: 5em 0 3em;
 	color: #ffffff;
