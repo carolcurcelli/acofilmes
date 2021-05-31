@@ -13,10 +13,10 @@ header {
 
 main {
 	width: 100%;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 7px);
     overflow: scroll;
 	position: absolute;
-	top: 150px;
+	top: 70px;
 	scroll-behavior: smooth;
 }
 
