@@ -19,7 +19,6 @@ main {
 	position: absolute;
 	top: 0;
 	scroll-behavior: smooth;
-	border-top: solid 1px red;
 }
 
 header .container {
