@@ -1,3 +1,7 @@
+body {
+	position:
+}
+
 header {
 	background-color: #e7e7e7;
 	padding: 10px 0;
@@ -9,10 +13,10 @@ header {
 
 main {
 	width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 150px);
     overflow: scroll;
 	position: absolute;
-	top: 100px;
+	top: 150px;
 	scroll-behavior: smooth;
 }
 
