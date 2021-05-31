@@ -16,8 +16,15 @@ main {
     height: calc(100vh - 70px);
     overflow: scroll;
 	position: absolute;
-	top: 70px;
+	top: 0;
 	scroll-behavior: smooth;
+	border-top: solid 1px red;
+}
+
+.header__wrapper:after{
+	content: 'teste';
+	position: absolute;
+	top: 0;
 }
 
 header .container {
