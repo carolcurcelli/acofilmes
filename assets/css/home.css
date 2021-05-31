@@ -12,7 +12,7 @@ main {
     height: calc(100vh - 100px);
     overflow: scroll;
 	position: absolute;
-	bottom: 0;
+	top: 100px;
 	scroll-behavior: smooth;
 }
 
