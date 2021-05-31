@@ -294,6 +294,10 @@ footer .container {
 
 .trampo {
 	animation: slide 20s ease infinite;
+	height: 89vh;
+	width: 100vw;
+	flex-shrink: 0;
+	background-position: center;
 }
 
 @keyframes slide {
