@@ -13,7 +13,7 @@ header {
 
 main {
 	width: 100%;
-    height: calc(100vh - 7px);
+    height: calc(100vh - 70px);
     overflow: scroll;
 	position: absolute;
 	top: 70px;
