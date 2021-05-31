@@ -1,5 +1,5 @@
 body {
-	position:
+	position: relative;
 }
 
 header {
@@ -24,7 +24,8 @@ main {
 .header__wrapper:after{
 	content: 'teste';
 	position: absolute;
-	top: 0;
+	top: 30px;
+	background: red;
 }
 
 header .container {
