@@ -1,13 +1,7 @@
-
-body,
-.--open main {
-	overflow:hidden;
-}
-
 header {
 	background-color: #e7e7e7;
 	padding: 10px 0;
-	position: fixed;
+	position: sticky;
 	top: 0;
 	width: 100vw;
 	z-index: 10;
