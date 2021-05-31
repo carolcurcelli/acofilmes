@@ -18,7 +18,7 @@ main {
     overflow: scroll;
 	position: absolute;
 	scroll-behavior: smooth;
-	top: 100px;
+	top: 70px;
 }
 
 header .container {
