@@ -6,7 +6,7 @@ body {
 header {
 	background-color: #e7e7e7;
 	padding: 10px 0;
-	position: sticky;
+	position: fixed;
 	top: 0;
 	width: 100vw;
 	z-index: 10;
@@ -15,7 +15,7 @@ header {
 main {
 	width: 100%;
     height: calc(100vh - 70px);
-    overflow: scroll;
+    overflow-y: scroll;
 	position: absolute;
 	scroll-behavior: smooth;
 	top: 70px;
@@ -70,7 +70,8 @@ h1 a {
 footer {
 	background-color: #e7e7e7;
 	padding: 10px 0;
-	width: 100vw;
+	width: 100%;
+	max-width: 100vw;
 }
 
 .footer__title {
@@ -153,6 +154,10 @@ footer .container {
 	right: -60px;
     top: -150px;
     transform: rotate(56deg);
+}
+
+.celebrities__title {
+	width: 315px;
 }
 
 .celebrities__title strong, 
@@ -256,13 +261,14 @@ footer .container {
 	left: 0;
 }
 
-.about-us__left, 
-.about-us__right {
+.about-us__left {
 	width: 50%;
 }
 
 .about-us__right {
 	margin-top: -48px;
+	width: 50%;
+	max-width: 300px;
 }
 
 .about-us__socials {
@@ -336,6 +342,14 @@ footer .container {
 	display: block;
 	text-transform: uppercase;
 	font-weight: bold;
+}
+
+.clients--mobile {
+	width: 100vw;
+}
+
+.clients--desktop {
+	display: none;
 }
 
 /* CARROUSEL */
@@ -433,5 +447,481 @@ footer .container {
 	100% {
 		opacity: 1;
 		bottom: -36px;
+	}
+}
+
+@media (min-width: 750px) {
+	.about-us .container {
+		padding-right: 30px;
+	}
+}
+
+@media (min-width: 768px) {
+	.about-us__wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+	.about-us .container {
+
+	}
+}
+
+@media (min-width: 1000px) {
+	.about-us .container {
+		padding-right: 40px;
+	}
+}
+
+@media (min-width: 1024px) {
+	body {
+		overflow-x: hidden;
+	}
+	main {
+		position: relative;
+		overflow-y: initial;
+	}
+	.carrousel {
+		max-width: 100vw;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+	}
+	.trampo {
+		animation: none;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+	}
+
+	.trampo:first-child { 
+		grid-area: 1 / 1 / 3 / 2; 
+		height: 100vh;
+	}
+
+	.trampo:nth-child(2) { 
+		grid-area: 1 / 2 / 2 / 3; 
+	}
+
+	.trampo:last-child { 
+		grid-area: 2 / 2 / 3 / 3; 
+	}
+
+	.about-us {
+		overflow: hidden;
+	}
+
+	.about-us__left,
+	.about-us__title:after {
+		max-width: 400px;
+	}
+
+	.about-us__right {
+		height: 750px;
+		max-width: 472px;
+		position: relative;
+	}
+
+	.about-us__image:nth-child(1) {
+		position: absolute;
+		left: -60px;
+		width: 250px;
+	}
+
+	.about-us__image:nth-child(2) {
+		position: absolute;
+		right: 50px;
+		top: 190px;
+		width: 240px;
+	}
+
+	.about-us__image:nth-child(3) {
+		position: absolute;
+		left: -10px;
+		top: 330px;
+		width: 240px;
+	}
+
+	.about-us__image:nth-child(4) {
+		position: absolute;
+		right: 0;
+		top: 460px;
+		width: 280px;
+	}
+
+	.about-us__right:after {
+		content: '';
+		display: block;
+		height: 12em;
+		width: 12em;
+		border: solid 2px #181818;
+		border-radius: 50px;
+		position: absolute;
+		bottom: -70px;
+		left: -10px;
+		transform: rotate(65deg);
+		z-index: 1;
+	}
+
+	.contact {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.about-us__socials {
+		width: 11em;
+	}
+
+	.contact__title {
+		font-size: 2rem;
+	}
+
+	.contect__wrapper {
+		width: 50%;
+	}
+
+	.contact__title:after {
+		width: 80%;
+	}
+
+	.contact:before {
+		content: '';
+		display: block;
+		height: 25em;
+		width: 25em;
+		border: solid 2px #ffffff;
+		border-radius: 50px;
+		position: absolute;
+		top: -20px;
+		right: -10px;
+		transform: rotate(65deg);
+		z-index: 1;
+	}
+
+	.celebrities {
+		height: 1280px;
+	}
+
+	.celebrities__title {
+		font-size: 2rem;
+		width: 375px;
+	}
+
+	.celebrities__title strong:after, .our-work__title strong:after {
+		display: none;
+	}
+
+	.celebrities__title:after {
+		top: -270px;
+		left: -50px;
+	}
+
+	.celebrities__icon, .our-work__icon {
+		width: 40%;
+	}
+
+	.celebrities__icon:nth-child(8),
+	.celebrities__icon:nth-child(6) {
+		display: initial;
+	}
+
+	.celebrities__icon:nth-child(8) {
+		position: absolute;
+		top: 190px;
+		z-index: 5;
+		left: 0;
+	}
+
+	.celebrities__icon:nth-child(2) {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+
+	.celebrities__icon:nth-child(3) {
+		position: absolute;
+		top: 684px;
+		right: 14%;
+	}
+
+	.celebrities__icon:nth-child(6) {
+		position: absolute;
+		right: 0;
+		width: 35%;
+		top: 360px;
+	}
+
+	.celebrities__icon:nth-child(5) {
+		position: absolute;
+		top: 170px;
+		width: 260px;
+		left: 37%;
+	}
+
+	.celebrities__icon:nth-child(7) {
+		position: absolute;
+		top: 530px;
+		left: 39%;
+		width: 23%;
+	}
+
+	.celebrities__icon:nth-child(4) {
+		position: absolute;
+		top: 690px;
+	}
+
+	.celebrities__icon:nth-child(1) {
+		position: absolute;
+		top: 1000px;
+		left: 23%;
+		width: 340px;
+	}
+
+	.our-work {
+		height: 990px;
+	}
+
+	.our-work__title {
+		font-size: 2rem;
+	}
+
+	.our-work__title:after {
+		top: -270px;
+		right: -50px;
+	}
+
+	.our-work__icon:nth-child(1) {
+		position: absolute;
+		top: 250px;
+		z-index: 5;
+		right: 0;
+	}
+
+	.our-work__icon:nth-child(2) {
+		position: absolute;
+		top: 20px;
+		left: 13%;
+	}
+
+	.our-work__icon:nth-child(3) {
+		position: absolute;
+		top: 654px;
+		left: 42%;
+	}
+
+	.our-work__icon:nth-child(4) {
+		position: absolute;
+		left: 8%;
+		width: 35%;
+		top: 470px;
+	}
+
+	.our-work__icon:nth-child(5) {
+		position: absolute;
+		top: 430px;
+		width: 260px;
+		right: 37%;
+	}
+
+	.clients--mobile {
+		display: none;
+	}
+
+	.clients--desktop {
+		display: block;
+		padding: 8em 0;
+	}
+
+	.clients--desktop__wrapper {
+		display: flex;
+	}
+
+	.clients--desktop img {
+		width: 50%;
+	}
+
+	.about-us__image:nth-child(1) {
+		width: 380px;
+	}
+
+	.about-us__image:nth-child(2) {
+		right: 1vw;
+		top: 210px;
+	}
+
+	.about-us__image:nth-child(3) {
+		left: 0;
+	}
+
+	.mobile__menu__icon {
+		display: none;
+	}
+
+	.mobile__menu__list {
+		display: flex;
+		list-style-type: none;
+		align-items: center;
+	}
+
+	.about-us__socials,
+	.mobile__menu__item:first-child,
+	.mobile__menu__link:before {
+		display: none;
+	}
+
+	.mobile__menu__item:nth-child(2) a {
+		margin-left: 0;
+	}
+
+	.mobile__menu__item:nth-child(6) a {
+		margin-right: 0;
+	}
+
+	.mobile__menu__link {
+		margin: 0 1em;
+	}
+
+	.about-us__title {
+		font-size: 2rem;
+	}
+
+	.about-us__description,
+	.contact__description,
+	.contact__label {
+		font-size: 1.2rem;
+	}
+
+	h1 {
+		width: 180px;
+		height: 60px;
+	}
+
+	.clients__title {
+		font-size: 2rem;
+		text-transform: uppercase;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.about-us__wrapper {
+		justify-content: space-around;
+	}
+}
+
+@media (min-width: 1280px) {
+	.about-us .container {
+		padding-right: 0;
+	}
+
+	.contact:after {
+		content: '';
+		display: block;
+		height: 25em;
+		width: 25em;
+		border: solid 2px #ffffff;
+		border-radius: 50px;
+		position: absolute;
+		bottom: -250px;
+		left: -230px;
+		transform: rotate(65deg);
+		z-index: 1;
+	}
+
+	.celebrities__title:after {
+		height: 21em;
+		width: 18em;
+		top: -381px;
+		left: -50px;
+	}
+
+	.celebrities__icon:nth-child(1) {
+		top: 580px;
+		right: 16vw;
+		left: initial;
+		width: 340px;
+	}
+
+	.celebrities__icon:nth-child(2) {
+		top: 10px;
+		right: 16vw;
+		width: 30%;
+	}
+
+	.celebrities__icon:nth-child(3) {
+		top: 510px;
+		left: 23vw;
+		width: 30%;
+	}
+
+	.celebrities__icon:nth-child(4) {
+		top: 590px;
+		left: -6vw;
+		width: 28%;
+	}
+
+	.celebrities__icon:nth-child(5) {
+		top: 130px;
+	}
+
+	.celebrities__icon:nth-child(6) {
+		width: 30%;
+		top: 240px;
+	}
+
+	.celebrities__icon:nth-child(7) {
+		top: 410px;
+		left: 47%;
+		width: 22vw;
+	}
+
+	.celebrities__icon:nth-child(8) {
+		left: 8vw;
+    	width: 30%;
+	}
+
+	.celebrities {
+		height: 850px;
+	}
+
+	.our-work__title:after {
+		height: 21em;
+		width: 18em;
+		top: -311px;
+		right: -50px;
+		transform: rotate( -56deg);
+	}
+
+	.our-work__icon:nth-child(1) {
+		top: 390px;
+	right: 3vw;
+		left: initial;
+		width: 340px;
+	}
+
+	.our-work__icon:nth-child(2) {
+		top: 10px;
+		left: 21vw;
+		width: 30%;
+	}
+
+	.our-work__icon:nth-child(3) {
+		top: 550px;
+		left: 27vw;
+		width: 30%;
+	}
+
+	.our-work__icon:nth-child(4) {
+		top: 290px;
+		left: 2vw;
+		width: 28%;
+	}
+
+	.our-work__icon:nth-child(5) {
+		top: 320px;
+		width: 260px;
+		right: 29vw;
+	}
+
+	.our-work {
+		height: 930px;
 	}
 }

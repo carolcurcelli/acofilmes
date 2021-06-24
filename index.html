@@ -34,55 +34,56 @@
 				<div class="mobile__menu">
 					<img src="assets/img/menu.png" alt="" class="mobile__menu__icon" id="menuOpener">
 				</div>
+				<ul class="mobile__menu__list" id="menu">
+					<li class="mobile__menu__item">
+						<a href="#topo" class="mobile__menu__link">
+							Topo
+						</a>
+					</li>
+					<li class="mobile__menu__item">
+						<a href="#nosso-trabalho" class="mobile__menu__link">
+							Nosso Trabalho
+						</a>
+					</li>
+					<li class="mobile__menu__item">
+						<a href="#clientes" class="mobile__menu__link">
+							Clientes
+						</a>
+					</li>
+					<li class="mobile__menu__item">
+						<a href="#quem-somos" class="mobile__menu__link">
+							Quem Somos
+						</a>
+					</li>
+					<li class="mobile__menu__item">
+						<a href="#contato" class="mobile__menu__link">
+							Contato
+						</a>
+					</li>
+					<li class="mobile__menu__item">
+						<a href="/acervo" class="mobile__menu__link">
+							Acervo
+						</a>
+					</li>
+					<li class="mobile__menu__item">
+						<div class="about-us__socials">
+							<a href="https://www.instagram.com/acofilmes/" class="about-us__socials__links" target="_blank" rel="noopener noreferrer">
+								<img src="assets/img/instagram--small.png" alt="Instagram da Aço Filmes" class="about-us__socials__logo">
+							</a>
+							<a href="https://www.youtube.com/channel/UCeHLOVdIc5JM_E83JBOnFkA" class="about-us__socials__links" target="_blank" rel="noopener noreferrer">
+								<img src="assets/img/youtube--small.png" alt="YouTube da Aço Filmes" class="about-us__socials__logo">
+							</a>
+							<a href="https://www.facebook.com/acofilmes" class="about-us__socials__links" target="_blank" rel="noopener noreferrer">
+								<img src="assets/img/facebook--small.png" alt="Facebook da Aço Filmes" class="about-us__socials__logo">
+							</a>
+						</div>
+					</li>
+				</ul>
 			</div>
-			<ul class="mobile__menu__list" id="menu">
-				<li class="mobile__menu__item">
-					<a href="#topo" class="mobile__menu__link">
-						Topo
-					</a>
-				</li>
-				<li class="mobile__menu__item">
-					<a href="#nosso-trabalho" class="mobile__menu__link">
-						Nosso Trabalho
-					</a>
-				</li>
-				<li class="mobile__menu__item">
-					<a href="#clientes" class="mobile__menu__link">
-						Clientes
-					</a>
-				</li>
-				<li class="mobile__menu__item">
-					<a href="#quem-somos" class="mobile__menu__link">
-						Quem Somos
-					</a>
-				</li>
-				<li class="mobile__menu__item">
-					<a href="#contato" class="mobile__menu__link">
-						Contato
-					</a>
-				</li>
-				<li class="mobile__menu__item">
-					<a href="/acervo" class="mobile__menu__link">
-						Acervo
-					</a>
-				</li>
-				<li class="mobile__menu__item">
-					<div class="about-us__socials">
-						<a href="https://www.instagram.com/acofilmes/" class="about-us__socials__links" target="_blank" rel="noopener noreferrer">
-							<img src="assets/img/instagram--small.png" alt="Instagram da Aço Filmes" class="about-us__socials__logo">
-						</a>
-						<a href="https://www.youtube.com/channel/UCeHLOVdIc5JM_E83JBOnFkA" class="about-us__socials__links" target="_blank" rel="noopener noreferrer">
-							<img src="assets/img/youtube--small.png" alt="YouTube da Aço Filmes" class="about-us__socials__logo">
-						</a>
-						<a href="https://www.facebook.com/acofilmes" class="about-us__socials__links" target="_blank" rel="noopener noreferrer">
-							<img src="assets/img/facebook--small.png" alt="Facebook da Aço Filmes" class="about-us__socials__logo">
-						</a>
-					</div>
-				</li>
-			</ul>
 		</header>
+		<div id="topo"></div>
 		<main>
-			<section id="topo" class="carrousel">
+			<section class="carrousel">
 				<div style="background-image:url(assets/img/slide-1.png)" class="trampo"></div>
 				<div style="background-image:url(assets/img/slide-2.png)" class="trampo"></div>
 				<div style="background-image:url(assets/img/slide-3.png)" class="trampo"></div>
@@ -91,7 +92,7 @@
 				<div class="container">
 					<h2 class="celebrities__title">
 						<div>
-							<div>testando 3
+							<div>
 								<span>Trabalhando</span> com personalidades <strong>digitais e da TV.</strong>
 							</div>
 						</div>
@@ -129,7 +130,15 @@
 				</article>
 				<article class="clients" id="clientes">
 					<img src="assets/img/clients--mobile.png" alt="" class="clients--mobile">
-					<div class="clients--desktop"></div>
+					<div class="clients--desktop">
+						<h2 class="clients__title">
+							Clientes
+						</h2>
+						<div class="clients--desktop__wrapper">
+							<img src="assets/img/clients--desktop1.png" alt="">
+							<img src="assets/img/clients--desktop2.png" alt="">
+						</div>
+					</div>
 				</article>
 			</section>
 			<section class="about-us" id="quem-somos">
@@ -165,48 +174,50 @@
 			</section>
 			<section class="contact" id="contato">
 				<div class="container">
-					<h2 class="contact__title">
-						Formulário de contato
-					</h2>
-					<p class="contact__description">
-						Contrate nosso serviço! <br />
-						Preencha o formulário que entraremos em contato
-					</p>
-					<form action="">
-						<div class="contact__group">
-							<label for="nome" class="contact__label">
-								Nome
-							</label>
-							<input type="text" class="contact__input" id="nome" required />
-						</div>
-						<div class="contact__group">
-							<label for="email" class="contact__label">
-								E-mail
-							</label>
-							<input type="email" class="contact__input" id="email" required />
-						</div>
-						<div class="contact__group --select">
-							<label for="assunto" class="contact__label">
-								Assunto
-							</label>
-							<select class="contact__select" id="assunto" required />
-								<option hidden disabled selected value></option>
-								<option>Evento</option>
-								<option>Casamento</option>
-								<option>Comercial</option>
-								<option>Videoclipe</option>
-							</select>
-						</div>
-						<div class="contact__group">
-							<label for="observacoes" class="contact__label">
-								Observações
-							</label>
-							<textarea class="contact__textarea" id="observacoes" rows="3"></textarea>
-						</div>
-						<div class="contact__group --submit">
-							<button type="submit" class="contact__submit">Enviar</button>
-						</div>
-					</form>
+					<div class="contect__wrapper">
+						<h2 class="contact__title">
+							Formulário de contato
+						</h2>
+						<p class="contact__description">
+							Contrate nosso serviço! <br />
+							Preencha o formulário que entraremos em contato
+						</p>
+						<form action="">
+							<div class="contact__group">
+								<label for="nome" class="contact__label">
+									Nome
+								</label>
+								<input type="text" class="contact__input" id="nome" required />
+							</div>
+							<div class="contact__group">
+								<label for="email" class="contact__label">
+									E-mail
+								</label>
+								<input type="email" class="contact__input" id="email" required />
+							</div>
+							<div class="contact__group --select">
+								<label for="assunto" class="contact__label">
+									Assunto
+								</label>
+								<select class="contact__select" id="assunto" required />
+									<option hidden disabled selected value></option>
+									<option>Evento</option>
+									<option>Casamento</option>
+									<option>Comercial</option>
+									<option>Videoclipe</option>
+								</select>
+							</div>
+							<div class="contact__group">
+								<label for="observacoes" class="contact__label">
+									Observações
+								</label>
+								<textarea class="contact__textarea" id="observacoes" rows="3"></textarea>
+							</div>
+							<div class="contact__group --submit">
+								<button type="submit" class="contact__submit">Enviar</button>
+							</div>
+						</form>
+					</div>
 				</div>
 			</section>
 			<footer id="footer">
