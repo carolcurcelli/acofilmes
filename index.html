@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0">
 		<title>Aço Filmes | Produtora de Filmes</title>
 		<meta name="description" content="Produtora versátil e diferenciada que busca conceber em seus produtos uma visão distinta dos meios de comunicação">
-		<link rel="canonical" href="https://www.alura.com.br">
+		<link rel="canonical" href="https://www.acofilmes.com.br">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 		<link rel="icon" type="image/png" href="assets/img/favicon.png">
@@ -84,9 +84,9 @@
 		<div id="topo"></div>
 		<main>
 			<section class="carrousel">
-				<div style="background-image:url(assets/img/slide-1.png)" class="trampo"></div>
-				<div style="background-image:url(assets/img/slide-2.png)" class="trampo"></div>
-				<div style="background-image:url(assets/img/slide-3.png)" class="trampo"></div>
+				<div style="background-image:url(http://acofilmes.com.br/wp-content/uploads/slide-1.png)" class="trampo"></div>
+				<div style="background-image:url(http://acofilmes.com.br/wp-content/uploads/slide-2.png)" class="trampo"></div>
+				<div style="background-image:url(http://acofilmes.com.br/wp-content/uploads/slide-3.png)" class="trampo"></div>
 			</section>
 			<section class="celebrities" id="personalidades">
 				<div class="container">
@@ -182,24 +182,24 @@
 							Contrate nosso serviço! <br />
 							Preencha o formulário que entraremos em contato
 						</p>
-						<form action="">
+						<!-- <form action="contact.php" method="post">
 							<div class="contact__group">
 								<label for="nome" class="contact__label">
 									Nome
 								</label>
-								<input type="text" class="contact__input" id="nome" required />
+								<input type="text" class="contact__input" name="nome" required />
 							</div>
 							<div class="contact__group">
 								<label for="email" class="contact__label">
 									E-mail
 								</label>
-								<input type="email" class="contact__input" id="email" required />
+								<input type="email" class="contact__input" name="email" required />
 							</div>
 							<div class="contact__group --select">
 								<label for="assunto" class="contact__label">
 									Assunto
 								</label>
-								<select class="contact__select" id="assunto" required />
+								<select class="contact__select" name="assunto" required />
 									<option hidden disabled selected value></option>
 									<option>Evento</option>
 									<option>Casamento</option>
@@ -208,15 +208,16 @@
 								</select>
 							</div>
 							<div class="contact__group">
-								<label for="observacoes" class="contact__label">
+								<label for="mensagem" class="contact__label">
 									Observações
 								</label>
-								<textarea class="contact__textarea" id="observacoes" rows="3"></textarea>
+								<textarea class="contact__textarea" name="mensagem" rows="3" required></textarea>
 							</div>
 							<div class="contact__group --submit">
-								<button type="submit" class="contact__submit">Enviar</button>
+								<input type="submit" value="Enviar" class="contact__submit" />
 							</div>
-						</form>
+						</form> -->
+						[contact-form-7 id="191" title="Formulário"]
 					</div>
 				</div>
 			</section>
